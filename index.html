@@ -1,72 +1,38 @@
 <html>
-    <head>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <meta charset="UTF-8">
-    </head>
-    <body>
-            <div id="game">
 
-                </div>
-              
-        <h1>The Psychic Game</h1>
-        <div>
-                <!-- <p id="userchoice-text"></p>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div id="game">
+
+  </div>
+
+  <h1>The Psychic Game</h1>
+  <div>
+    <!-- <p id="userchoice-text"></p>
                 <p id="computerchoice-text"></p> -->
-                <h2><span id="directions-text"><strong>Guess what letter I'm thinking of.</strong></span></h2>
-                <h2>Wins: <span id="wins"></span> </h2>
-                <h2>Losses: <span id="loses"></span> </h2>
-                <h2>Guesses left: <span id="Guesses"></span> </h2>
-                <h2>Your guesses so far: <span id="userChoice-text"><strong></strong></span></h2>
-              </div>
-              <script type="text/javascript">
+    <h2><span id="directions-text"><strong>Guess what letter I'm thinking of.</strong></span></h2>
+    <h2>Wins: <span id="wins"></span> </h2>
+    <h2>Losses: <span id="loses"></span> </h2>
+    <h2>Guesses left: <span id="Guesses"></span> </h2>
+    <h2>Your guesses so far: <span id="userChoice-text"><strong></strong></span></h2>
+  </div>
 
-                // Creates an array that lists out all of the options
-                var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o","p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-            
-                var wins = 0;
-                var losses = 0;
-            
-                var userChoiceText = document.getElementById("userChoice-text");
-                var computerChoiceText = document.getElementById("computerChoice-text");
-            
-            
-                // This is run whenever the user presses a key.
-                document.onkeyup = function (event) {
-            
-                  // Determines which key was pressed.
-                  var userGuess = event.key;
-            
-                  // Randomly chooses a choice from the array. Computer's guess.
-                  var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-                  var directionText = document.getElementById("directions-text")
-                  var winText = document.getElementById("wins")
-                  var loseText = document.getElementById("loses")
-            
-            
-                  // If letters match user wins
-                if ((userGuess === computerChoices)) {
-                    wins++;
-                      winText.textContent = wins;
-               
-                else ((userGuess === computerChoices)) {
-                      losses++;
-                      loseText.textContent = loses;
-                      
-                    // user guess
-                    userChoiceText.textContent = userGuess;
-                    computerChoiceText.textContent = computerGuess;
-                }}
-            
-            
-                };
-            
-            
-              </script>
-            
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./assets/javascript/game.js"></script>
+</body>
 
 </html>
