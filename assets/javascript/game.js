@@ -17,7 +17,7 @@
                 console.log(winText)
                 var loseText = document.getElementById("loses")
                 function reset () {
-                    //reset global values
+                   guessesLeft
                 }
                 function winCheck() {
 
@@ -32,10 +32,13 @@
                         loseText.textContent = losses;
                          /*
                          if guessesLeft = 0 run reset function
-                         
-                         
-                         
-                         */
+                        */
+
+                        if (guessesLeft ===  0 ){
+                        guessesLeft.call(reset);
+                        }
+                        
+
                       // user guess
                       userChoiceText.textContent = userGuess;
                       computerChoiceText.textContent = computerGuess;
